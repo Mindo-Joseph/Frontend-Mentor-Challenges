@@ -8,13 +8,14 @@ body{
     background-image: url(images/bg-intro-desktop.png);
 
 }
-.main-text{
+.main-text,.form-area{
     margin-left: 15%;
     display: flex;
     flex-direction: column;
     max-width: 30%;
     justify-content: center;
     margin-top: 15%;
+    float: left;
 }
 
 .main-text h1{
@@ -31,4 +32,15 @@ footer{
     justify-content: center;
 }
 
-
+.form-area button{
+    background-color:hsl(248,32%,49%);
+    width: 160%;
+    height: 50px;
+    border-radius: 10px;
+    border:thin;
+    
+}
+.form-area button p{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
