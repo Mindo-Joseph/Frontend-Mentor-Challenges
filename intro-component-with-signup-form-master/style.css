@@ -3,7 +3,32 @@
 }
 body{
     background-color: hsl(0,100%,74%);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
     background-image: url(images/bg-intro-desktop.png);
 
 }
+.main-text{
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.main-text h1{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+.main-text p{
+    font-weight: 400;
+    color: white;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+
 
