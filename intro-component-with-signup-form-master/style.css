@@ -31,6 +31,12 @@ footer{
     display: flex;
     justify-content: center;
 }
+.form-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6%;
+}
 
 .form-area button{
     background-color:hsl(248,32%,49%);
@@ -43,4 +49,55 @@ footer{
 .form-area button p{
     font-family: 'Poppins',sans-serif;
     color: white;
+}
+
+
+.form-body{
+    background-color: white;
+    margin-top: 10%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 160%;
+}
+
+.form-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-elements{
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 10px;
+}
+input,.submit-btn{
+    margin-top: 10px;
+    width: 105%;
+    padding: 9px 6px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    border-color: grey;
+}
+#fname{
+    margin-top: 30px;
+}
+.form-elements .submit-btn{
+    max-width: 105%;
+    border-radius: 4px;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+}
+.form-elements p{
+    font-size: 8px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }

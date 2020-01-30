@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-  
+
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  
+
 </head>
+
 <body>
   <div class="main-text">
     <h1>Learn to code by watching others</h1>
     <p>See how experienced developers solve problems in real time.
-    Watching scripted tutorials is great, but understanding how developers think is invaluable</p>
-  
+      Watching scripted tutorials is great, but understanding how developers think is invaluable</p>
+
   </div>
   <div class="form-area">
-    <button class="banner">
+    <button>
       <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
-      
-
     </button>
 
+    <form action="submit" class="main-form">
+      <div class="form-body">
+        <div class="form-elements">
+          <input type="text" name="fname" id="fname" placeholder="First Name">
+        </div>
+        <div class="form-elements">
+          <input type="text" name="lname" id="lname" placeholder="Last Name">
+        </div> 
+        <div class="form-elements">
+          <input type="text" name="fname" id="email" placeholder="Email">
+        </div>
+        <div class="form-elements">
+          <input type="text" name="fname" id="pass" placeholder="Password">
+        </div>
+        <div class="form-elements">
+          <button class="submit-btn">CLAIM YOUR FREE TRIAL</button>
+        </div>
+        <div class="form-elements">
+          <p>By clicking the button you agree to our <strong style="color: hsl(0, 100%, 74%) ">Terms and conditions</strong></p>
+        </div>
+
+
+      </div>
+
+    </form>
+
   </div>
+
   
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Joseph Mindo</a>.
-    </p>
-  </footer>
 </body>
+
 </html>
