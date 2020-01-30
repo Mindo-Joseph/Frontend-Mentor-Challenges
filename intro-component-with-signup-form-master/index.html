@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-
+  <script src="script.js"></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 
 
@@ -27,22 +27,22 @@
       <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
     </button>
 
-    <form action="submit" class="main-form">
+    <form action="submit" class="main-form" name="registration-form">
       <div class="form-body">
         <div class="form-elements">
-          <input type="text" name="fname" id="fname" placeholder="First Name">
+          <input type="text" name="fname" id="fname" placeholder="First Name"><span class="error"><p id="fname_error"></p></span>
         </div>
         <div class="form-elements">
-          <input type="text" name="lname" id="lname" placeholder="Last Name">
+          <input type="text" name="lname" id="lname" placeholder="Last Name"><span class="error"><p id="lname_error"></p></span>
         </div> 
         <div class="form-elements">
-          <input type="text" name="fname" id="email" placeholder="Email">
+          <input type="email" name="email" id="email" placeholder="Email"><span class="error"><p id="email_error"></p></span>
         </div>
         <div class="form-elements">
-          <input type="text" name="fname" id="pass" placeholder="Password">
+          <input type="password" name="password" id="pass" placeholder="Password"><span class="error"><p id="password_error"></p></span>
         </div>
         <div class="form-elements">
-          <button class="submit-btn">CLAIM YOUR FREE TRIAL</button>
+          <button class="submit-btn" type="submit">CLAIM YOUR FREE TRIAL</button>
         </div>
         <div class="form-elements">
           <p>By clicking the button you agree to our <strong style="color: hsl(0, 100%, 74%) ">Terms and conditions</strong></p>
