@@ -27,9 +27,8 @@ body{
     font-weight: 400;
     color: white;
 }
-footer{
-    display: flex;
-    justify-content: center;
+form{
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .form-area{
     display: flex;
@@ -43,6 +42,7 @@ footer{
     width: 160%;
     height: 50px;
     border-radius: 10px;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
     border:thin;
     
 }
@@ -66,13 +66,14 @@ footer{
     flex-direction: column;
     justify-content: center;
 }
+
 .form-elements{
     width: 80%;
     margin-left: 8%;
-    margin-top: 10px;
+    margin-top: 0.5px;
 }
 input,.submit-btn{
-    margin-top: 10px;
+    margin-top: 0.5px;
     width: 105%;
     padding: 9px 6px;
     border-radius: 4px;
@@ -85,12 +86,16 @@ input,.submit-btn{
 #fname{
     margin-top: 30px;
 }
+.submit-btn{
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+}
 .form-elements .submit-btn{
     max-width: 105%;
     border-radius: 4px;
     background-color: hsl(154, 59%, 51%);
     color: white;
 }
+
 .form-elements p{
     font-size: 8px;
     text-align: center;
