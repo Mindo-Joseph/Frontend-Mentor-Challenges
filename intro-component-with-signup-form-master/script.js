@@ -1,33 +1,51 @@
-document.getElementById("registration-form").onsubmit = function() {
-    var x = document.forms["registration-form"]["fname"].value;
-    var y = document.forms["registration-form"]["lname"].value;
-    var z = document.forms["registration-form"]["email"].value;
-
-    var submit = true;
-
-
-    if (x == null || x == "") {
-        fname_error = "First Name cannot be empty";
-        document.getElementById("fname_error").innerHTML = fname_error;
-        submit = false;
+function validateForm() {
+    let testResult = test();
+    if (testResult === false) {
+        document.getElementById('button').disabled = true;
     }
-    if (y == null || y == "") {
-        lname_error = "Last Name cannot be empty";
-        document.getElementById("lname_error").innerHTML = lname_error;
-        submit = false;
-    }
-    if (z == null || z == "") {
-        email_error = "Email Name cannot be empty";
-        document.getElementById("email_error").innerHTML = email_error;
-        submit = false;
-    }
-    return submit;
-
-}
-function removeWarning() {
-    document.getElementById(this.id + "_error").innerHTML = "";
-}
-
-document.getElementById("fname").onkeyup = removeWarning;
-document.getElementById("lname").onkeyup = removeWarning;
-document.getElementById("email").onkeyup = removeWarning;
+  }
+  
+  
+  function test() {
+    let firstName = document.getElementById('fname');
+    let lastName = document.getElementById("lname");
+    let password = document.getElementById("pass");
+    let regexpEmail = /[a-zA-Z0-9_.-]+@[a-zA-Z]+\.[a-zA-Z]{2,10}/g;
+    let regexpPassword = /([a-zA-Z0-9@_.#*&+-]+){7,20}/g;
+    let email = document.getElementById("email");
+    if (firstName.value == '') {
+     let newP = document.createElement('p');
+     let newPText = document.createTextNode('First Name cannot be empty');
+     let currentDiv = document.getElementById('fname_error');
+     newP.appendChild(newPText);
+     currentDiv.insertBefore(newP, null);
+     firstName.style = 'border: 3px solid hsl(0, 100%, 74%)';
+     firstName.placeholder = '';
+   } if (lastName.value == '') {
+     let newP = document.createElement('p');
+     let newPText = document.createTextNode('Last Name cannot be empty');
+     let currentDiv = document.getElementById('lname_error');
+     newP.appendChild(newPText);
+     currentDiv.insertBefore(newP, null);
+     lastName.style = 'border: 3px solid hsl(0, 100%, 74%)';
+     lastName.placeholder = '';
+   } if (email.value == '' || !regexpEmail.test(email.value)) {
+     let newP = document.createElement('p');
+     let newPText = document.createTextNode('Looks like this is not an email');
+     let currentDiv = document.getElementById('email_error');
+     newP.appendChild(newPText);
+     currentDiv.insertBefore(newP, null);
+     email.style = 'border: 3px solid hsl(0, 100%, 74%)';
+     email.placeholder = 'email@example/com';
+   } if (password == '' || !regexpPassword.test(password.value)) {
+     let newP = document.createElement('p');
+     let newPText = document.createTextNode('Invalid password format');
+     let currentDiv = document.getElementById('password_error');
+     newP.appendChild(newPText);
+     currentDiv.insertBefore(newP, null);
+     password.style = 'border: 3px solid hsl(0, 100%, 74%)';
+     password.placeholder = '';
+     return false;
+   }
+    return true;
+  }
