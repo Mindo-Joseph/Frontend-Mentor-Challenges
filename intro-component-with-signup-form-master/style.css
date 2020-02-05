@@ -4,38 +4,40 @@
 body{
     background-color: hsl(0,100%,74%);
     font-size: 16px;
+    
     font-family: 'Poppins', sans-serif;
     background-image: url(images/bg-intro-desktop.png);
 
 }
-.main-text,.form-area{
-    margin-left: 15%;
+/*Mobile design*/
+.row{
     display: flex;
     flex-direction: column;
-    max-width: 30%;
-    justify-content: center;
-    margin-top: 15%;
-    float: left;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.form-area{
+    width: 50%;
+    margin-left: 10%;
 }
 
 .main-text h1{
     font-weight: 700;
     font-size: 30px;
     color: white;
+    text-align: center;
+   
 }
 .main-text p{
     font-weight: 400;
     color: white;
+    text-align: center;
 }
 form{
     box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
-.form-area{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 6%;
-}
+
 
 .form-area button{
     background-color:hsl(248,32%,49%);
@@ -105,4 +107,41 @@ footer{
     display: flex;
     justify-content: center;
     align-items: baseline;
+}
+
+@media only screen and (min-width: 800px) {
+    .main-text{
+        position: absolute;
+        top: 40%;
+        bottom: 50%;
+        left: 10%;
+        text-align: left;
+        max-width: 40%;
+        
+    }
+    .form-area{
+        margin-left: 15%;
+        top: 10%;
+        bottom: 90%;
+        width: 30%;
+        position: absolute;
+        left: 35%;
+        right: 10%;  
+        
+        float: right;
+    
+    }
+    .main-text h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: white;
+        text-align: left;
+       
+    }
+    .main-text p{
+        font-weight: 400;
+        color: white;
+        text-align: left;
+    }
+    
 }
